@@ -1,0 +1,289 @@
+# =========================================================
+# NODE.JS / JAVASCRIPT
+# =========================================================
+
+node_modules/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build files
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.vite/
+
+# Coverage
+coverage/
+.nyc_output/
+
+
+# =========================================================
+# ENVIRONMENT VARIABLES / SECRETS
+# =========================================================
+
+.env
+.env.*
+!.env.example
+
+# Generic credentials / secrets
+credentials.json
+credentials*.json
+client_secret*.json
+secrets.json
+secrets*.json
+
+# Service account credentials
+service-account*.json
+serviceAccount*.json
+*-service-account.json
+*-credentials.json
+
+# Private keys / certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+
+# =========================================================
+# TARU BACKEND
+# =========================================================
+
+# Environment files
+tarubackend/.env
+tarubackend/.env.*
+!tarubackend/.env.example
+
+# ALL credentials inside Taru backend
+tarubackend/credentials/
+
+# Any credential/secret files directly inside Taru backend
+tarubackend/credentials.json
+tarubackend/client_secret*.json
+tarubackend/service-account*.json
+tarubackend/serviceAccount*.json
+tarubackend/secrets*.json
+
+# Private keys / certificates
+tarubackend/*.pem
+tarubackend/*.key
+tarubackend/*.p12
+tarubackend/*.pfx
+tarubackend/*.crt
+
+
+# =========================================================
+# FRONTEND
+# =========================================================
+
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+client/.env
+client/.env.*
+!client/.env.example
+
+web/.env
+web/.env.*
+!web/.env.example
+
+
+# =========================================================
+# OTHER BACKENDS
+# =========================================================
+
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+server/.env
+server/.env.*
+!server/.env.example
+
+api/.env
+api/.env.*
+!api/.env.example
+
+
+# =========================================================
+# DATABASE / LOCAL DATA
+# =========================================================
+
+*.sqlite
+*.sqlite3
+*.db
+
+data/
+database/
+tmp/
+temp/
+
+
+# =========================================================
+# LOGS
+# =========================================================
+
+logs/
+*.log
+
+
+# =========================================================
+# PYTHON / ML
+# =========================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+env/
+ENV/
+
+*.egg-info/
+.eggs/
+
+.ipynb_checkpoints/
+
+.python-version
+
+
+# =========================================================
+# OLLAMA / LOCAL AI
+# =========================================================
+
+.ollama/
+ollama/
+models/
+ollama.env
+
+
+# =========================================================
+# IDE / EDITORS
+# =========================================================
+
+.vscode/
+.idea/
+*.iml
+
+.vs/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+
+# =========================================================
+# OPERATING SYSTEM
+# =========================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+
+# =========================================================
+# GIT
+# =========================================================
+
+.git/
+*.orig
+
+
+# =========================================================
+# TEST / TEMPORARY FILES
+# =========================================================
+
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+*.tmp
+*.temp
+*.bak
+
+
+# =========================================================
+# UPLOADS / GENERATED FILES
+# =========================================================
+
+uploads/
+storage/
+generated/
+
+*.zip
+*.tar
+*.tar.gz
+
+
+# =========================================================
+# JAVA / MAVEN / GRADLE
+# =========================================================
+
+target/
+*.class
+
+.gradle/
+
+# Keep Gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
+
+# =========================================================
+# SPRING BOOT
+# =========================================================
+
+application-local.properties
+application-local.yml
+application-local.yaml
+
+
+# =========================================================
+# DOCKER
+# =========================================================
+
+docker-compose.override.yml
+.env.docker
+
+
+# =========================================================
+# LOCAL CONFIGURATION
+# =========================================================
+
+config.local.*
+config/*.local.*
+local.*
+*.local
+
+
+# =========================================================
+# BACKUP FILES
+# =========================================================
+
+*.backup
+*.old
+*.save
