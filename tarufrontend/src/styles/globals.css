@@ -1,0 +1,126 @@
+@import "./animations.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --taru-base: #E4E2DD;
+    --taru-primary: #1E1E1E;
+    --taru-accent: #DB4A2B;
+    --taru-secondary: #F8A348;
+    --taru-pink: #FF89A9;
+    --taru-campaign: #D9D6D0;
+  }
+
+  /* Custom Brutalist Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #E4E2DD;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #DB4A2B;
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1E1E1E;
+  }
+
+  body {
+    background-color: #E4E2DD;
+    color: #1E1E1E;
+    font-family: 'Satoshi', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  /* Brutalist Rectangular CTA Button with left-to-right sliding fill */
+  .btn-brutalist {
+    @apply relative inline-flex items-center justify-center font-satoshi font-medium uppercase text-sm tracking-widest px-6 py-3.5 border border-[#1E1E1E] bg-[#1E1E1E] text-[#E4E2DD] overflow-hidden select-none transition-colors duration-300;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-brutalist::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+  }
+
+  .btn-brutalist:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn-brutalist:hover {
+    color: #DB4A2B;
+    border-color: #1E1E1E;
+  }
+
+  .btn-brutalist > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Secondary Outline Button */
+  .btn-brutalist-outline {
+    @apply relative inline-flex items-center justify-center font-satoshi font-medium uppercase text-sm tracking-widest px-6 py-3.5 border border-[#1E1E1E] bg-transparent text-[#1E1E1E] overflow-hidden select-none transition-colors duration-300;
+  }
+
+  .btn-brutalist-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1E1E1E;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+  }
+
+  .btn-brutalist-outline:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn-brutalist-outline:hover {
+    color: #E4E2DD;
+  }
+
+  .btn-brutalist-outline > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Brutalist Form Input */
+  .input-brutalist {
+    @apply w-full bg-[#ECEAE5] border border-[#1E1E1E] px-4 py-3.5 text-[#1E1E1E] placeholder-[#8A8884] focus:outline-none focus:bg-white focus:border-[#DB4A2B] transition-colors rounded-none font-satoshi text-sm;
+  }
+
+  /* Brutalist Card */
+  .card-brutalist {
+    @apply border border-[#1E1E1E] bg-[#ECEAE5] rounded-none;
+  }
+}
+
